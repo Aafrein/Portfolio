@@ -1,0 +1,740 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    color: #ededed;
+    background: #750d59;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: #540E46;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: 2s ease forwards slideRight;
+
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0s;
+    opacity: 0;
+    animation: 1s ease forwards slideTop;
+}
+
+.navbar a:hover {
+    color: #FF10F0;
+    text-decoration: #FF10F0 0s;
+    transition: 0s;
+}
+
+
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(/Users/aafreinrafiq/Documents/Portfolio/best2.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: 3s ease forwards slideBottom;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: is ease forwards slideTop;
+    animation-delay: .7s;
+}
+
+.home-content h3 span {
+    color: #FF10F0;
+}
+
+.home-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: 2s ease forwards slideRight;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: 1s ease forwards slideRight;
+    animation-delay: .5s;
+    color: pink;
+}
+
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #FF10F0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #FF10F0;
+    text-decoration: none;
+    transition: .5s;
+    opacity: 0;
+    animation: 1s ease forwards slideLeft;
+    animation-delay: calc(.2s *var(--i));
+}
+
+.home-sci a:hover {
+    background: #FF10F0;
+    color: #081b29;
+    box-shadow: 0 0 2px #FF10F0;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #FF10F0;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: 1s ease forwards slideTop;
+    animation-delay: .5s;
+    box-shadow: 0 0 5px #FF10F0,
+        0 0 25px #FF10F0
+}
+
+
+.btn-box:hover {
+    box-shadow: 0 0 5px pink,
+        0 0 25px pink, 0 0 50px pink,
+        0 0 100px pink, 0 0 200px pink
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rems;
+}
+
+.about-img img {
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    background-size: cover;
+    background-color: #750d59;
+
+}
+
+.about-text h2 {
+    font-size: 60px;
+}
+
+.about-text h2 span {
+    color: #FF10F0;
+}
+
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p {
+    color: pink;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+
+#services {
+    color: pink;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 70px;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+
+.sub-title span {
+    color: #FF10F0;
+}
+
+.container {
+    padding: 90px;
+}
+
+.slider {
+    position: relative;
+    width: auto;
+    height: 700px;
+    overflow-x: hidden;
+    padding: 50px 0;
+    text-align: center;
+
+}
+
+.item {
+    position: absolute;
+    width: 400px;
+    height: 520px;
+    text-align: justify;
+    background-color: #270829;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 110px);
+    top: 0;
+    margin: 0 auto;
+    flex: 0 0 auto;
+    margin-right: 20px;
+
+}
+
+.slider .sub-title {
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 40px;
+}
+
+
+#next,
+#prev {
+    position: absolute;
+    top: 40%;
+    color: #FF10F0;
+    background-color: transparent;
+    border: none;
+    font-size: xx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 50px;
+}
+
+#next {
+    left: unset;
+    right: 50px;
+}
+
+.heading {
+    text-align: center;
+    color: #FF10F0;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+
+*/ .read {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #FF10F0;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #270829;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: 1s ease forwards slideTop;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #FF10F0,
+        0 0 25px #FF10F0
+}
+
+
+.home-sci a:hover {
+    box-shadow: 0 0 5px pink,
+        0 0 25px pink, 0 0 50px pink,
+        0 0 100px pink, 0 0 200px pink
+}
+
+.first {
+    text-align: center;
+}
+
+.second {
+    margin: 5px;
+}
+
+.skills {
+    font-weight: 600;
+    font-size: larger;
+    width: 600px;
+    margin: 60px auto;
+    color: #540E46;
+    padding: 20px;
+    box-shadow: 0 0 5px pink,
+        0 0 25px pink, 0 0 50px pink,
+        0 0 100px pink, 0 0 200px pink
+}
+
+.skills li {
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.bar {
+    background: #270829;
+    display: block;
+    height: 20px;
+    border: 1px solid pink;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 5px pink,
+        0 0 25px pink, 0 0 50px pink,
+        0 0 100px pink, 0 0 200px pink;
+    transition: all 0.3s cubic-bezier(.25, .8, .25);
+
+}
+
+.bar:hover {
+    box-shadow: 0 0 5px pink,
+        0 0 25px pink, 0 0 50px pink,
+        0 0 100px pink, 0 0 200px pink;
+}
+
+.bar span {
+    height: 20px;
+    float: left;
+    background: rgb(189, 51, 187);
+}
+
+.html {
+    width: 90%;
+    animation: html 3s;
+}
+
+.css {
+    width: 70%;
+    animation: css 3s;
+}
+
+.javascript {
+    width: 60%;
+    animation: javascript 3s;
+}
+
+.python {
+    width: 65%;
+    animation: python 3s;
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+
+}
+
+@keyframes javascript {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+
+}
+
+@keyframes python {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 65%;
+    }
+
+}
+
+
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.okok {
+    color: #FF10F0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    animation: 1s ease forwards slideTop;
+    animation-delay: .5s;
+}
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+
+}
+
+
+.cont {
+    color: #FF10F0;
+    animation: 1s ease forwards slideTop;
+    animation-delay: .5s;
+}
+
+.sumn {
+    font-weight: bold;
+    font-size: 60px;
+    animation: 1s ease forwards slideTop;
+    animation-delay: .5s;
+}
+
+.containers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+
+}
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.containers .contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.containers .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.containers .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #FF10F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: 1s ease forwards slideTop;
+    animation-delay: .5s;
+}
+
+.contactInfo {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.contactform {
+    width: 48%;
+    box-sizing: border-box;
+}
+
+.containers .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+    animation: 1s ease forwards slideTop;
+    animation-delay: .5s;
+}
+
+.containers .contactInfo .box .text h3 {
+    font-weight: 500;
+    color: #FF10F0;
+}
+
+.contactform {
+    width: 40%;
+    padding: 40px;
+    background: #FF10F0;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: 1s ease forwards slideTop;
+    animation-delay: .5s;
+    box-shadow: 0 0 5px #FF10F0,
+        0 0 25px #FF10F0
+}
+
+
+.contactform h2 {
+    font-size: 30px;
+    color: #540E46;
+    font-weight: 500;
+}
+
+.sed {
+    color: #540E46;
+}
+
+.textr {
+    animation: 1s ease forwards slideTop;
+    animation-delay: .5s;
+}
+
+.contactform .inputbox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactform .inputbox input,
+.contactform .inputbox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #540E46;
+    outline: none;
+    resize: none;
+}
+
+.contactform .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactform .inputbox input:focus~span,
+.contactform .inputbox input:valid~span,
+.contactform .inputbox textarea:focus~span,
+.contactform .inputbox textarea:valid~span {
+    color: #540E46;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactform .inputbox input[type="submit"] {
+    width: 100px;
+    background: #fff;
+    color: #750d59;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px) {
+    .contact {
+        padding: 50px;
+    }
+
+    .containers {
+        flex-direction: column;
+    }
+
+    .containers .contactInfo {
+        margin-bottom: 40px;
+    }
+
+    .containers .contactInfo {
+        width: 100%;
+    }
+}
+
+.inputboxs {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #FF10F0;
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: 1s ease forwards slideTop;
+    animation-delay: .5s;
+    box-shadow: 0 0 5px #FF10F0, 0 0 25px #FF10F0;
+}
+
+.research {
+    font-weight: bold;
+    font-size: 60px;
+    animation: 1s ease forwards slideTop;
+    animation-delay: .5s;
+}
+
+.footer {
+    background: #540E46;
+    color: #fff;
+    padding: 20px 10%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    background: #FF10F0;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.footer-social a:hover {
+    background: #081b29;
+    color: #FF10F0;
+    box-shadow: 0 0 2px #FF10F0;
+}
